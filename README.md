@@ -57,7 +57,7 @@ Para obtener una cuenta y el `CredentialGuid` necesarios para usar este paquete,
 builder.Services.AddIQeSignVeriFactu(options =>
 {
     options.CredentialGuid = builder.Configuration["IQeSign:CredentialGuid"]!;
-    options.Environment    = IQeSignEnvironment.Production; // o Staging para pruebas
+    options.Environment = IQeSignEnvironment.Production; // o Staging para pruebas
     options.TimeoutSeconds = 30;
 });
 ```
@@ -87,34 +87,34 @@ public class FacturacionService(IVeriFactuService veriFactu)
     {
         var response = await veriFactu.AddDocumentAsync(new AddDocumentRequest
         {
-            CertificateId   = "id-del-certificado-en-iqportal",
+            CertificateId = "id-del-certificado-en-iqportal",
             CertificatePass = "contraseña-del-pfx",
             File = new VeriFactuDocumentFile
             {
-                Version            = SchemaVersion.V1_0,
-                Type               = InvoiceType.Factura,       // "F1"
-                Serial             = "FAC",
-                Number             = "2024-001",
-                Date               = "2024-01-15",
+                Version = SchemaVersion.V1_0,
+                Type = InvoiceType.Factura, // "F1"
+                Serial = "FAC",
+                Number = "2024-001",
+                Date = "2024-01-15",
                 OperationDescription = "Servicios de consultoría",
                 Issuer = new IssuerInfo
                 {
-                    Name   = "Mi Empresa S.L.",
+                    Name = "Mi Empresa S.L.",
                     CifNif = "B12345678"
                 },
-                Name    = "Cliente S.A.",
-                CifNif  = "A98765432",
-                BaseAmount  = 1000.00m,
+                Name = "Cliente S.A.",
+                CifNif = "A98765432",
+                BaseAmount = 1000.00m,
                 TotalAmount = 1210.00m,
                 VatDetail =
                 [
                     new VatDetailItem
                     {
-                        Vat        = VatType.Iva,                               // "01"
-                        VatKey     = VatKey.RegimenGeneral,                     // "01"
-                        Type       = VatOperationType.SujetaNoExentaSinInversion, // "S1"
+                        Vat = VatType.Iva, // "01"
+                        VatKey = VatKey.RegimenGeneral, // "01"
+                        Type = VatOperationType.SujetaNoExentaSinInversion, // "S1"
                         VatPercent = 21m,
-                        VatAmount  = 210.00m,
+                        VatAmount = 210.00m,
                         BaseAmount = 1000.00m
                     }
                 ]
@@ -190,23 +190,23 @@ Todos los valores de los campos codificados están disponibles como constantes `
 
 ```csharp
 // Tipos de impuesto (L1)
-VatType.Iva        // "01"
-VatType.Igic       // "03"
+VatType.Iva // "01"
+VatType.Igic // "03"
 
 // Tipos de factura (L2)
-InvoiceType.Factura               // "F1"
-InvoiceType.FacturaSimplificada   // "F2"
-InvoiceType.RectificativaError    // "R1"
+InvoiceType.Factura // "F1"
+InvoiceType.FacturaSimplificada // "F2"
+InvoiceType.RectificativaError // "R1"
 
 // Tipos de operación IVA (L9)
-VatOperationType.SujetaNoExentaSinInversion  // "S1"
-VatOperationType.NoSujetaArticulo7           // "N1"
+VatOperationType.SujetaNoExentaSinInversion // "S1"
+VatOperationType.NoSujetaArticulo7 // "N1"
 
 // Causas de exención (L10)
-VatExemptionType.Articulo20  // "E1"
+VatExemptionType.Articulo20 // "E1"
 
 // Versión del esquema (L15)
-SchemaVersion.V1_0  // "1.0"
+SchemaVersion.V1_0 // "1.0"
 ```
 
 Para IGIC usar `VatKeyIgic` en lugar de `VatKey`. Para el resto de listas ver `IdentificationType` (L7), `RectificationType` (L3), `VatExemptionType` (L10).
