@@ -15,6 +15,8 @@
     <Description>Cliente .NET para la API IQ eSign VeriFactu de InnoQubit. Permite gestionar certificados y documentos VeriFactu (facturación electrónica) con soporte para entornos de producción y staging.</Description>
     <PackageTags>verifactu;iqesign;innoqubit;facturacion;electronica;hacienda;aeat</PackageTags>
     <PackageProjectUrl>https://www.innoqubit.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Innoqubit-Software/IQeSign.VeriFactu</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>Copyright © InnoQubit Software</Copyright>
     <PackageIcon>Logo_Verifactu.png</PackageIcon>
