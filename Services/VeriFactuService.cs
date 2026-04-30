@@ -43,8 +43,8 @@ internal sealed class VeriFactuService : IVeriFactuService
     {
         var queryParams = new Dictionary<string, string?>
         {
-            ["initDate"]    = request?.InitDate,
-            ["finishDate"]  = request?.FinishDate
+            ["initDate"] = request?.InitDate,
+            ["finishDate"] = request?.FinishDate
         };
 
         return _client.GetAsync<ListDocumentsResponse>("/api/v2/VeriFactu/Document/List", queryParams, ct);

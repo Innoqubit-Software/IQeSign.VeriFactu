@@ -1,42 +1,49 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <LangVersion>latest</LangVersion>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<PropertyGroup>
+		<TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
 
-    <!-- NuGet Package Metadata -->
-    <PackageId>IQeSign.VeriFactu</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>InnoQubit Software</Authors>
-    <Company>InnoQubit Software</Company>
-    <Description>Cliente .NET para la API IQ eSign VeriFactu de InnoQubit. Permite gestionar certificados y documentos VeriFactu (facturación electrónica) con soporte para entornos de producción y staging.</Description>
-    <PackageTags>verifactu;iqesign;innoqubit;facturacion;electronica;hacienda;aeat</PackageTags>
-    <PackageProjectUrl>https://www.innoqubit.com</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Innoqubit-Software/IQeSign.VeriFactu</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Copyright © InnoQubit Software</Copyright>
-    <PackageIcon>Logo_Verifactu.png</PackageIcon>
-    <AssemblyName>IQeSign.VeriFactu</AssemblyName>
-    <RootNamespace>IQeSign.VeriFactu</RootNamespace>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<!-- NuGet Package Metadata -->
+		<PackageId>IQeSign.VeriFactu</PackageId>
+		<Version>1.0.1</Version>
+		<Authors>InnoQubit Software</Authors>
+		<Company>InnoQubit Software</Company>
+		<Description>Cliente .NET para la API IQ eSign VeriFactu de InnoQubit. Permite gestionar certificados y documentos VeriFactu (facturación electrónica) con soporte para entornos de producción y staging.</Description>
+		<PackageTags>verifactu;iqesign;innoqubit;facturación;electronica;hacienda;aeat</PackageTags>
+		<PackageProjectUrl>https://www.innoqubit.com</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Innoqubit-Software/IQeSign.VeriFactu</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Copyright>Copyright © InnoQubit Software</Copyright>
+		<PackageIcon>Logo_Verifactu.png</PackageIcon>
+		<AssemblyName>IQeSign.VeriFactu</AssemblyName>
+		<RootNamespace>IQeSign.VeriFactu</RootNamespace>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\Logo_Verifactu.png" Pack="true" PackagePath="\" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\Logo_Verifactu.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
-    <PackageReference Include="System.Net.Http.Json" Version="9.0.0" />
-    <PackageReference Include="System.Text.Json" Version="9.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+		<PackageReference Include="System.Net.Http.Json" Version="9.0.0" />
+		<PackageReference Include="System.Text.Json" Version="9.0.0" />
+	</ItemGroup>
 
 </Project>

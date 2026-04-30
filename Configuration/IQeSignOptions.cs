@@ -59,5 +59,5 @@ public sealed class IQeSignOptions
 internal static class HttpClientNames
 {
     internal const string Production = "IQeSign.Production";
-    internal const string Staging    = "IQeSign.Staging";
+    internal const string Staging = "IQeSign.Staging";
 }

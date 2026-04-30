@@ -23,7 +23,7 @@ public static class ServiceCollectionExtensions
     /// builder.Services.AddIQeSignVeriFactu(options =>
     /// {
     ///     options.CredentialGuid = builder.Configuration["IQeSign:CredentialGuid"]!;
-    ///     options.Environment    = IQeSignEnvironment.Production;
+    ///     options.Environment = IQeSignEnvironment.Production;
     /// });
     ///
     /// // O bien usando appsettings.json con sección "IQeSign":

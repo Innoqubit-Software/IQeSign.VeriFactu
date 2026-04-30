@@ -36,8 +36,8 @@ internal sealed class IQeSignHttpClient
 		ILogger<IQeSignHttpClient> logger)
 	{
 		_httpClientFactory = httpClientFactory;
-		_options            = options.Value;
-		_logger             = logger;
+		_options = options.Value;
+		_logger = logger;
 	}
 
 	// -------------------------------------------------------------------------
@@ -117,7 +117,7 @@ internal sealed class IQeSignHttpClient
 			if (_cachedToken is not null && DateTime.UtcNow < _tokenExpiresAt)
 				return _cachedToken;
 
-			_cachedToken   = await FetchTokenAsync(ct).ConfigureAwait(false);
+			_cachedToken = await FetchTokenAsync(ct).ConfigureAwait(false);
 			_tokenExpiresAt = DateTime.UtcNow.AddHours(23); // Margen de 1h antes de los 24h reales
 			return _cachedToken;
 		}
