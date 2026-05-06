@@ -129,35 +129,35 @@ public sealed class VatDetailItem
     /// </summary>
     public string Type { get; set; } = string.Empty;
 
-    /// <summary>
-    /// Porcentaje de IVA/impuesto aplicado.
-    /// <para>Opcional.</para>
-    /// </summary>
-    public decimal? VatPercent { get; set; }
+	/// <summary>
+	/// Porcentaje de IVA/impuesto aplicado.
+	/// <para><b>Requerido.</b></para>
+	/// </summary>
+	public decimal VatPercent { get; set; }
 
-    /// <summary>
-    /// Importe de la cuota del IVA/impuesto.
-    /// <para>Opcional.</para>
-    /// </summary>
-    public decimal? VatAmount { get; set; }
+	/// <summary>
+	/// Importe de la cuota del IVA/impuesto.
+	/// <para><b>Requerido.</b></para>
+	/// </summary>
+	public decimal VatAmount { get; set; }
 
     /// <summary>
     /// Porcentaje de recargo de equivalencia.
-    /// <para>Opcional.</para>
+    /// <para>Requerdio.</para>
     /// </summary>
-    public decimal? VatEcPercent { get; set; }
+    public decimal VatEcPercent { get; set; }
 
     /// <summary>
     /// Importe del recargo de equivalencia.
-    /// <para>Opcional.</para>
+    /// <para>Requerido.</para>
     /// </summary>
-    public decimal? VatEcAmount { get; set; }
+    public decimal VatEcAmount { get; set; }
 
-    /// <summary>
-    /// Importe de la base imponible.
-    /// <para>Opcional.</para>
-    /// </summary>
-    public decimal? BaseAmount { get; set; }
+	/// <summary>
+	/// Importe de la base imponible.
+	/// <para><b>Requerido.</b></para>
+	/// </summary>
+	public decimal BaseAmount { get; set; }
 }
 
 /// <summary>
@@ -268,11 +268,11 @@ public sealed class VeriFactuDocumentFile
     /// </summary>
     public string Date { get; set; } = string.Empty;
 
-    /// <summary>
-    /// Código de país del receptor en formato ISO 3166-1 alfa-2 (ej. "ES", "FR").
-    /// <para>Opcional.</para>
-    /// </summary>
-    public string? Country { get; set; }
+	/// <summary>
+	/// Código de país del receptor en formato ISO 3166-1 alfa-2 (ej. "ES", "FR").
+	/// <para><b>Requerido.</b></para>
+	/// </summary>
+	public string Country { get; set; } = string.Empty;
 
     /// <summary>
     /// Fecha de la operación en formato yyyy-MM-dd.
@@ -286,13 +286,13 @@ public sealed class VeriFactuDocumentFile
     /// </summary>
     public string? OperationDescription { get; set; }
 
-    /// <summary>
-    /// Indica si la factura es simplificada.
-    /// <para>Opcional.</para>
-    /// <para>Solo puede ser <c>true</c> si <c>Type</c> es F1, F3, R1, R2, R3 o R4.</para>
-    /// <para>Para F2 o R5 la factura siempre es simplificada (este campo se ignora).</para>
-    /// </summary>
-    public bool? Simplified { get; set; }
+	/// <summary>
+	/// Indica si la factura es simplificada.
+	/// <para><b>Requerido.</b></para>
+	/// <para>Solo puede ser <c>true</c> si <c>Type</c> es F1, F3, R1, R2, R3 o R4.</para>
+	/// <para>Para F2 o R5 la factura siempre es simplificada (este campo se ignora).</para>
+	/// </summary>
+	public bool Simplified { get; set; }
 
     /// <summary>
     /// Tipo de factura.

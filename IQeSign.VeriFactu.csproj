@@ -15,7 +15,7 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<!-- NuGet Package Metadata -->
 		<PackageId>IQeSign.VeriFactu</PackageId>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Authors>InnoQubit Software</Authors>
 		<Company>InnoQubit Software</Company>
 		<Description>Cliente .NET para la API IQ eSign VeriFactu de InnoQubit. Permite gestionar certificados y documentos VeriFactu (facturación electrónica) con soporte para entornos de producción y staging.</Description>
@@ -33,7 +33,7 @@
 
 	<ItemGroup>
 		<None Include="..\Logo_Verifactu.png" Pack="true" PackagePath="\" />
-		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -161,8 +161,6 @@ internal sealed class IQeSignHttpClient
 			request.Content = new StringContent(json, Encoding.UTF8, "application/json");
 		}
 
-		//request.Content = JsonContent.Create(body, options: JsonOptions);
-
 		return request;
 	}
 
